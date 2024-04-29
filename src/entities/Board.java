@@ -22,33 +22,25 @@ public class Board {
     public void check(int x, int y) {
         Card c = this.board[x][y];
         if (c.getColor() == "\u001B[37m") return;
+
         if (x-1 >= 0 && this.board[x-1][y].getColor() != "\u001B[37m") {
             if (c.getUp() > this.board[x-1][y].getDown()) {
                 this.board[x-1][y].setColor(c.getColor());
-            } else if (c.getUp() < this.board[x-1][y].getDown()){
-                c.setColor(this.board[x-1][y].getColor());
             }
         }
         if (y-1 >= 0 && this.board[x][y-1].getColor() != "\u001B[37m") {
             if (c.getLeft() > this.board[x][y-1].getRight()) {
                 this.board[x][y-1].setColor(c.getColor());
-            } else if (c.getLeft() < this.board[x][y-1].getRight()){
-                c.setColor(this.board[x][y-1].getColor());
             }
-
         }
         if (x+1 <= 2 && this.board[x+1][y].getColor() != "\u001B[37m"){
             if (c.getDown() > this.board[x+1][y].getUp()) {
                 this.board[x+1][y].setColor(c.getColor());
-            } else if (c.getDown() < this.board[x+1][y].getUp()){
-                c.setColor(this.board[x+1][y].getColor());
             }
         }
         if (y+1 <= 2 && this.board[x][y+1].getColor() != "\u001B[37m") {
             if (c.getRight() > this.board[x][y+1].getLeft()) {
                 this.board[x][y+1].setColor(c.getColor());
-            } else if (c.getRight() < this.board[x][y+1].getLeft()){
-                c.setColor(this.board[x][y+1].getColor());
             }
         }
     }

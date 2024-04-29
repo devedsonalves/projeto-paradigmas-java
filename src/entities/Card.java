@@ -16,6 +16,22 @@ public class Card {
         return up;
     }
 
+    public void setUp(int up) {
+        this.up = up;
+    }
+
+    public void setDown(int down) {
+        this.down = down;
+    }
+
+    public void setLeft(int left) {
+        this.left = left;
+    }
+
+    public void setRight(int right) {
+        this.right = right;
+    }
+
     public int getDown() {
         return down;
     }
