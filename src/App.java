@@ -40,6 +40,7 @@ public class App {
                 int y = scan.nextInt() -1;
                 while (!board.addCardOnBoard(p1.getCards()[card], x, y)) {
                     board.printBoard();
+                    System.out.println("\u001B[37mEsta posição já tem uma carta... ");
                     System.out.println("\u001B[37mDigite a linha que deseja: ");
                     x = scan.nextInt() -1;
                     System.out.println("\u001B[37mDigite a coluna que deseja: ");
@@ -63,7 +64,7 @@ public class App {
                 int y = scan.nextInt() - 1;
                 while (!board.addCardOnBoard(p2.getCards()[carta], x, y)) {
                     board.printBoard();
-                    System.out.println("\u001B[37mEsta posição já tem uma carta.: ");
+                    System.out.println("\u001B[37mEsta posição já tem uma carta... ");
                     System.out.println("\u001B[37mDigite a linha que deseja: ");
                     x = scan.nextInt() - 1;
                     System.out.println("\u001B[37mDigite a coluna que deseja: ");
